@@ -11,16 +11,6 @@
 #include <list>
 #include <fstream>
 
-#define ANSI_COLOR_RED     "\x1b[31m"
-#define ANSI_COLOR_GREEN   "\x1b[32m"
-#define ANSI_COLOR_YELLOW  "\x1b[33m"
-#define ANSI_COLOR_BLUE    "\x1b[34m"
-#define ANSI_COLOR_MAGENTA "\x1b[35m"
-#define ANSI_COLOR_CYAN    "\x1b[36m"
-#define ANSI_COLOR_RESET   "\x1b[0m"
-
-#define ANSI_COLOR_RED_STRING(_str_) std::string(ANSI_COLOR_RED).append(_str_).append(ANSI_COLOR_RED).c_str()
-
 class AnalyzePdb
 {
 private:
@@ -269,25 +259,25 @@ void help()
 		"[-f or -function function_name]",
 		"get the function address. ",
 		" ",
-		"for example: AnalyzePdb.exe 64win7_ntoskrnl.exe -f RtlInitUnicodeString.");
+		"for example: AnalyzePdb.exe 64win7_ntoskrnl.exe -f RtlInitUnicodeString");
 
 	printf(logformat,
 		"[-x function_sign]",
 		"get the function address. ",
 		" ",
-		"for example: AnalyzePdb.exe 64win7_ntoskrnl.exe -x Rtl*. will get all Rtl function.");
+		"for example: AnalyzePdb.exe 64win7_ntoskrnl.exe -x Rtl*. will get all Rtl function");
 
 	printf(logformat,
 		"[-s or -save file_path]",
 		"save analyze pdb data. ",
 		" ",
-		"for example: AnalyzePdb.exe 64win7_ntoskrnl.exe -x Rtl* -s Rtl.txt.");
+		"for example: AnalyzePdb.exe 64win7_ntoskrnl.exe -x Rtl* -s Rtl.txt");
 
 	printf(logformat,
 		"[-l or -list list_file_path]",
 		"analyze list functions. ",
 		" ",
-		"for example: AnalyzePdb.exe 64win7_ntoskrnl.exe -l list.txt -s list_function.txt.");
+		"for example: AnalyzePdb.exe 64win7_ntoskrnl.exe -l list.txt -s list_function.txt");
 }
 
 
